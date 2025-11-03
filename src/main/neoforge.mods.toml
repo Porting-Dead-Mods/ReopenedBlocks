@@ -13,11 +13,18 @@ credits=""
 authors="${mod_authors}"
 description='''${mod_description}'''
 
-#[[mixins]]
-#config="${mod_id}.mixins.json"
+[[mixins]]
+    config="${mod_id}.mixins.json"
 
 #[[accessTransformers]]
 #file="META-INF/accesstransformer.cfg"
+
+[[dependencies.${mod_id}]]
+modId="portingdeadlibs"
+type="required"
+versionRange="[${pdl_version},)"
+ordering="NONE"
+side="BOTH"
 
 [[dependencies.${mod_id}]]
 modId="neoforge"
